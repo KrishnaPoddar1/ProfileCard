@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    --primary-darkCyan: hsl(185, 75%, 39%);
+    --primary-veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --primary-darkGrayishBlue: hsl(227, 10%, 46%);
+    --neutral-darkGray: hsl(0, 0%, 59%);
+
+    --fs-nameStats : 18px;
+    --fontFamily: "Kumbh Sans", sans-serif;
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontFamily);
+    font-weight: var(--fw-bold);
+    background-color: var(--primary-darkCyan);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    
+    background-position: -671px -700px, 108px 382px;
+    /*background-position: -400px -500px, 700px 300px;*/
+    overflow: hidden;
+}
+
+@media screen and (min-width:768px) {
+    body {
+        background-position: -400px -500px, 700px 300px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 20rem;
+    border-radius: 1rem;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 10px 10px #6e6d6d;
+}
+
+p, .light{
+    color: var(--neutral-darkGray);
+    font-weight: var(--fw-normal);
+}
+
+h1 {
+    font-size: var(--fs-nameStats);
+}
+
+.img-wrapper img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+#icon {
+    position: absolute;
+    width: 80px;
+    border-radius: 50%;
+    border: 5px solid white;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-wrapper {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.place {
+    border-bottom: 1px solid var(--neutral-darkGray);
+    padding-bottom: 1.5rem;
+    font-weight: var(--fw-bold);
+    margin-top: -1rem;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.stats p{
+    margin-top: -1rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
